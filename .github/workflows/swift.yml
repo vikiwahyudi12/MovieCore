@@ -7,14 +7,18 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  test:
     runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v4
-    
-    - name: Select Xcode version
+
+    - name: Set Xcode Version
       run: sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
 
     - name: Build and Test
-      run: swift test -v
+      run: |
+        xcodebuild test \
+          -scheme MovieCore \
+          -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
+          -quiet
