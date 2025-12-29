@@ -13,7 +13,7 @@ let package = Package(
             targets: ["MovieCore"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/realm/realm-swift.git", .upToNextMajor(from: "10.52.0"))
+        .package(url: "https://github.com/realm/realm-swift.git", exact: "10.46.0")
     ],
     targets: [
         .target(
