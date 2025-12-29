@@ -9,7 +9,7 @@ public final class MovieMapper {
                 overview: result.overview,
                 posterPath: result.posterPath,
                 voteAverage: result.voteAverage,
-                releaseDate: result.releaseDate,
+                releaseDate: result.releaseDate
             )
         }
     }
