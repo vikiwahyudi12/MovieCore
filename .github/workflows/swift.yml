@@ -21,4 +21,5 @@ jobs:
         xcodebuild test \
           -scheme MovieCore \
           -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.5' \
+          -skipPackagePluginValidation \
           -quiet
