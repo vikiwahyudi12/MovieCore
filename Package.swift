@@ -1,22 +1,19 @@
 // swift-tools-version: 5.9
-
 import PackageDescription
 
 let package = Package(
     name: "MovieCore",
     platforms: [
-        .iOS(.v16)
+        .iOS(.v16),
+        .macOS(.v13)
     ],
     products: [
         .library(
             name: "MovieCore",
             targets: ["MovieCore"]),
     ],
-//    dependencies: [
-//        .package(url: "https://github.com/realm/realm-swift.git", .upToNextMajor(from: "10.45.0"))
-//    ],
     dependencies: [
-        .package(url: "https://github.com/realm/realm-swift.git", from: "10.54.0")
+        .package(url: "https://github.com/realm/realm-swift.git", .upToNextMajor(from: "10.52.0"))
     ],
     targets: [
         .target(
